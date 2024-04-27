@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Soma</title>
+</head>
+<body>
+
+<h2>Bem-vindo à Calculadora de Soma</h2>
+
+<p>Por favor, insira dois números inteiros para somar:</p>
+
+<input type="text" id="numero1" placeholder="Número 1">
+<input type="text" id="numero2" placeholder="Número 2">
+<button onclick="calcularSoma()">Calcular Soma</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcularSoma() {
+    var num1 = parseInt(document.getElementById('numero1').value);
+    var num2 = parseInt(document.getElementById('numero2').value);
+    
+    if (isNaN(num1) || isNaN(num2)) {
+        document.getElementById('resultado').innerHTML = "Por favor, insira números válidos.";
+    } else {
+        var soma = num1 + num2;
+        document.getElementById('resultado').innerHTML = "A soma de " + num1 + " e " + num2 + " é: " + soma;
+    }
+}
+</script>
+
+<script>
+// Adicionando a mensagem "Olá Mundo"
+document.addEventListener("DOMContentLoaded", function() {
+    var mensagem = "Olá Mundo";
+    var mensagemElement = document.createElement("p");
+    mensagemElement.textContent = mensagem;
+    document.body.insertBefore(mensagemElement, document.body.firstChild);
+});
+</script>
+
+</body>
+</html>
